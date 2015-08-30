@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="I1kYX7" name="Samplematic Synth" projectType="audioplug"
+              version="1.0.0" bundleIdentifier="com.odangludo.SamplematicSynth"
+              includeBinaryInAppConfig="1" buildVST="1" buildVST3="0" buildAU="1"
+              buildRTAS="0" buildAAX="0" pluginName="SampleMatic Synth" pluginDesc="Automatically play samples fro your library matching the pitch of MIDI notes"
+              pluginManufacturer="yourcompany" pluginManufacturerCode="Manu"
+              pluginCode="I1ky" pluginChannelConfigs="{1, 1}, {2, 2}" pluginIsSynth="1"
+              pluginWantsMidiIn="1" pluginProducesMidiOut="0" pluginSilenceInIsSilenceOut="0"
+              pluginEditorRequiresKeys="0" pluginAUExportPrefix="SampleMaticSynthAU"
+              pluginRTASCategory="" aaxIdentifier="com.yourcompany.SampleMaticSynth"
+              pluginAAXCategory="AAX_ePlugInCategory_Dynamics" jucerVersion="3.2.0"
+              companyName="Odang Ludo" companyWebsite="karl.hiner.com" companyEmail="karl.hiner@gmail.com">
+  <MAINGROUP id="W7Giki" name="Samplematic Synth">
+    <GROUP id="{C4F2C2E0-2D14-5BA7-FEA3-052E2FE34DBC}" name="Source">
+      <FILE id="aTwuEJ" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="BFoMJm" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="wOwZei" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="GKCOUm" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" osxSDK="default" osxCompatibility="default" osxArchitecture="default"
+                       isDebug="1" optimisation="1" targetName="SampleMatic Synth"/>
+        <CONFIGURATION name="Release" osxSDK="10.10 SDK" osxCompatibility="10.8 SDK"
+                       osxArchitecture="64BitIntel" isDebug="0" optimisation="3" targetName="SampleMatic Synth"
+                       cppLibType="libc++" cppLanguageStandard="c++14"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_events" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_graphics" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_video" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_opengl" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../Downloads/JUCE-OSX/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../Downloads/JUCE-OSX/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULES id="juce_audio_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_devices" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_formats" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_audio_processors" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_core" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_cryptography" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_data_structures" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_events" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_graphics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_basics" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_gui_extra" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_opengl" showAllCode="1" useLocalCopy="0"/>
+    <MODULES id="juce_video" showAllCode="1" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+</JUCERPROJECT>
