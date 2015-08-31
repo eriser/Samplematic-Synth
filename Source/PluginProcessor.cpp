@@ -11,12 +11,18 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-
+Synthesiser *synthesiser;
 //==============================================================================
 SamplematicSynthAudioProcessor::SamplematicSynthAudioProcessor() {
+    MelodicSamplerSound *samplerSound = new MelodicSamplerSound(*new String("/Users/khiner/Development/aubio/The Beatles-Hey Jude.mp3"), 0, 10000000);
+    MelodicSamplerVoice *samplerVoice = new MelodicSamplerVoice();
+    synthesiser = new Synthesiser();
+    synthesiser->addVoice(samplerVoice);
+    synthesiser->addSound(samplerSound);
 }
 
 SamplematicSynthAudioProcessor::~SamplematicSynthAudioProcessor() {
+    delete(synthesiser);
 }
 
 //==============================================================================
@@ -116,14 +122,14 @@ void SamplematicSynthAudioProcessor::releaseResources() {
 void SamplematicSynthAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages) {
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
-    for (int channel = 0; channel < getNumInputChannels(); ++channel)
-    {
-        float* channelData = buffer.getWritePointer (channel);
+    for (int channel = 0; channel < getNumInputChannels(); ++channel) {
+        float* channelData = buffer.getWritePointer(channel);
         for (int samp = 0; samp < buffer.getNumSamples(); samp++) {
             // sawtooth at freq of buffer size
-            channelData[samp] = (float) samp / (float) buffer.getNumSamples();
+            // channelData[samp] = (float) samp / (float) buffer.getNumSamples();
         }
     }
+    synthesiser->renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
 
 //==============================================================================
