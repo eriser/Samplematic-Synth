@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AFC925AB2CC9C240AF781400"
-               BuildableName = "SampleMatic Synth.component"
+               BuildableName = "Samplematic Synth.component"
                BlueprintName = "Samplematic Synth"
                ReferencedContainer = "container:Samplematic Synth.xcodeproj">
             </BuildableReference>
@@ -39,11 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         FilePath = "/Applications/Ableton Live 9 Suite.app">
+      </PathRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AFC925AB2CC9C240AF781400"
-            BuildableName = "SampleMatic Synth.component"
+            BuildableName = "Samplematic Synth.component"
             BlueprintName = "Samplematic Synth"
             ReferencedContainer = "container:Samplematic Synth.xcodeproj">
          </BuildableReference>
@@ -61,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AFC925AB2CC9C240AF781400"
-            BuildableName = "SampleMatic Synth.component"
+            BuildableName = "Samplematic Synth.component"
             BlueprintName = "Samplematic Synth"
             ReferencedContainer = "container:Samplematic Synth.xcodeproj">
          </BuildableReference>

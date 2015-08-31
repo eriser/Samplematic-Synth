@@ -21,6 +21,8 @@
 		21892282909E81EBCEFD56A4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 349319DAB6DCB5EA1F36930A /* juce_video.mm */; };
 		25FEC05A54B1CC3ECE568B2F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDB9F6B0FAC18897364BDFD /* Accelerate.framework */; };
 		298B48A287D11020FB2CE698 /* AUCarbonViewDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1C8D1FFC2C2CC98CBDF31D2 /* AUCarbonViewDispatch.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		2E683EAF1B93EA5000EADC39 /* MelodicSampler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E683EAD1B93EA5000EADC39 /* MelodicSampler.cpp */; };
+		2E683EB31B9404D500EADC39 /* NoteToSampleTranslator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E683EB11B9404D500EADC39 /* NoteToSampleTranslator.cpp */; };
 		2E8276C1339DE50337CED675 /* AUMIDIBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18506704C33B74D2A0C0123A /* AUMIDIBase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		36BB4A6C5DAD72841A8E3482 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2CBFA58753459B93A92F46 /* CoreAudio.framework */; };
 		38F3025999530C0CE8F004D5 /* CAVectorUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4711E9CC880E4E4247DFB077 /* CAVectorUnit.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -247,6 +249,10 @@
 		2DF0B62AE556C707224AD9EF /* juce_RectanglePlacement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_RectanglePlacement.h; path = "../../../Downloads/JUCE-OSX/modules/juce_graphics/placement/juce_RectanglePlacement.h"; sourceTree = SOURCE_ROOT; };
 		2E0BB055E1F054912B456588 /* juce_ComponentAnimator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_ComponentAnimator.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/layout/juce_ComponentAnimator.cpp"; sourceTree = SOURCE_ROOT; };
 		2E1854116918FA9D51C90F80 /* juce_ResizableWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_ResizableWindow.h; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/windows/juce_ResizableWindow.h"; sourceTree = SOURCE_ROOT; };
+		2E683EAD1B93EA5000EADC39 /* MelodicSampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MelodicSampler.cpp; path = ../../Source/MelodicSampler.cpp; sourceTree = "<group>"; };
+		2E683EAE1B93EA5000EADC39 /* MelodicSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MelodicSampler.h; path = ../../Source/MelodicSampler.h; sourceTree = "<group>"; };
+		2E683EB11B9404D500EADC39 /* NoteToSampleTranslator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NoteToSampleTranslator.cpp; path = ../../Source/NoteToSampleTranslator.cpp; sourceTree = "<group>"; };
+		2E683EB21B9404D500EADC39 /* NoteToSampleTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteToSampleTranslator.h; path = ../../Source/NoteToSampleTranslator.h; sourceTree = "<group>"; };
 		2EAFD4C8C30238C1E58B8877 /* juce_FlacAudioFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_FlacAudioFormat.h; path = "../../../Downloads/JUCE-OSX/modules/juce_audio_formats/codecs/juce_FlacAudioFormat.h"; sourceTree = SOURCE_ROOT; };
 		2EC812EE06EE2517EE521C15 /* juce_LookAndFeel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_LookAndFeel.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/lookandfeel/juce_LookAndFeel.cpp"; sourceTree = SOURCE_ROOT; };
 		2F53F6314DB85C2153CEA11A /* juce_RTAS_DigiCode2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_RTAS_DigiCode2.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_audio_plugin_client/RTAS/juce_RTAS_DigiCode2.cpp"; sourceTree = SOURCE_ROOT; };
@@ -622,7 +628,7 @@
 		8FB3F162F6E66CBC6516256B /* juce_Socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_Socket.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_core/network/juce_Socket.cpp"; sourceTree = SOURCE_ROOT; };
 		901C40A3D75D3AA624CB54F2 /* juce_FileBrowserComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_FileBrowserComponent.h; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/filebrowser/juce_FileBrowserComponent.h"; sourceTree = SOURCE_ROOT; };
 		903A23EF9D53413AFDE02FB1 /* juce_SliderPropertyComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_SliderPropertyComponent.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/properties/juce_SliderPropertyComponent.cpp"; sourceTree = SOURCE_ROOT; };
-		909FFA4DA8921F6AB3EED80C /* SampleMatic Synth.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SampleMatic Synth.component"; sourceTree = BUILT_PRODUCTS_DIR; };
+		909FFA4DA8921F6AB3EED80C /* Samplematic Synth.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Samplematic Synth.component"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F36F130B9FAC6747FABFDF /* juce_BooleanPropertyComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_BooleanPropertyComponent.h; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/properties/juce_BooleanPropertyComponent.h"; sourceTree = SOURCE_ROOT; };
 		9167620C2D1CB808C4A9225A /* juce_linux_Windowing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_linux_Windowing.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/native/juce_linux_Windowing.cpp"; sourceTree = SOURCE_ROOT; };
 		91784C98F1A3A24B4578EDEF /* juce_RelativeCoordinatePositioner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_RelativeCoordinatePositioner.cpp; path = "../../../Downloads/JUCE-OSX/modules/juce_gui_basics/positioning/juce_RelativeCoordinatePositioner.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1872,6 +1878,10 @@
 				7EE0FD7378A84710BEB12ED2 /* PluginProcessor.h */,
 				F74BFDAC774E94B50776C69D /* PluginEditor.cpp */,
 				AF1769ED14E8DD34AA810608 /* PluginEditor.h */,
+				2E683EAD1B93EA5000EADC39 /* MelodicSampler.cpp */,
+				2E683EAE1B93EA5000EADC39 /* MelodicSampler.h */,
+				2E683EB11B9404D500EADC39 /* NoteToSampleTranslator.cpp */,
+				2E683EB21B9404D500EADC39 /* NoteToSampleTranslator.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -2646,7 +2656,7 @@
 		D2CCB2F6CB264252477B1E49 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				909FFA4DA8921F6AB3EED80C /* SampleMatic Synth.component */,
+				909FFA4DA8921F6AB3EED80C /* Samplematic Synth.component */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2927,7 +2937,7 @@
 			name = "Samplematic Synth";
 			productInstallPath = "$(HOME)/Library/Audio/Plug-Ins/Components/";
 			productName = "Samplematic Synth";
-			productReference = 909FFA4DA8921F6AB3EED80C /* SampleMatic Synth.component */;
+			productReference = 909FFA4DA8921F6AB3EED80C /* Samplematic Synth.component */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -3002,6 +3012,7 @@
 				74CB5F65E69428923902A673 /* AUCarbonViewControl.cpp in Sources */,
 				298B48A287D11020FB2CE698 /* AUCarbonViewDispatch.cpp in Sources */,
 				B3E487369BE5BC78DC2C20DB /* AUDispatch.cpp in Sources */,
+				2E683EAF1B93EA5000EADC39 /* MelodicSampler.cpp in Sources */,
 				BB2906EF53D7F1464B709DC3 /* AUEffectBase.cpp in Sources */,
 				16981DB2183694F723BA868A /* AUInputElement.cpp in Sources */,
 				2E8276C1339DE50337CED675 /* AUMIDIBase.cpp in Sources */,
@@ -3014,6 +3025,7 @@
 				8B8B3CD4359BD36B8140C25E /* CAMutex.cpp in Sources */,
 				56CF8846650FFBEE38A07843 /* CarbonEventHandler.cpp in Sources */,
 				0BDC7A75CEE323F137A676D8 /* CAStreamBasicDescription.cpp in Sources */,
+				2E683EB31B9404D500EADC39 /* NoteToSampleTranslator.cpp in Sources */,
 				38F3025999530C0CE8F004D5 /* CAVectorUnit.cpp in Sources */,
 				C60AADCDC9B8A404512143BF /* ComponentBase.cpp in Sources */,
 				1A2A0D9498FD4C7656451EC4 /* MusicDeviceBase.cpp in Sources */,
@@ -3069,6 +3081,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
+				JUCE_USE_MP3AUDIOFORMAT = true;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Samplematic Synth";
@@ -3143,6 +3156,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
+				JUCE_USE_MP3AUDIOFORMAT = true;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "Samplematic Synth";
 				REZ_SEARCH_PATHS = "";
