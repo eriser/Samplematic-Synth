@@ -13,6 +13,8 @@
 
 #include "JuceHeader.h"
 #include "MelodicSampler.h"
+#include "NoteToSampleTranslator.h"
+
 //==============================================================================
 /**
 */

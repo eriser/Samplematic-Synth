@@ -2,6 +2,8 @@
 #define MELODIC_SAMPLER_H_INCLUDED
 
 #include "JuceHeader.h"
+
+const int NUM_MIDI_NOTES = 128;
 //==============================================================================
 /**
  A subclass of SynthesiserSound that represents a sampled audio clip.
@@ -27,8 +29,9 @@ public:
      @param beginSamples   the sample to end/loop playback
      */
     MelodicSamplerSound (String& filePath,
-                  int beginSamples,
-                  int endSamples);
+                         int midiNote,
+                         int beginSamples,
+                         int numSamples);
     
     /** Destructor. */
     ~MelodicSamplerSound();
@@ -50,7 +53,7 @@ private:
     
     ScopedPointer<AudioSampleBuffer> data;
     double sourceSampleRate;
-    int length, attackSamples, releaseSamples;
+    int note, length, attackSamples, releaseSamples;
 };
 
 

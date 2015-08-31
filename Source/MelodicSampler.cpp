@@ -3,8 +3,9 @@
 static MP3AudioFormat *mp3Format = new MP3AudioFormat();
 
 MelodicSamplerSound::MelodicSamplerSound (String& filePath,
+                            const int midiNote,
                             const int beginSamples,
-                            const int endSamples) {
+                            const int numSamples) : note(midiNote) {
     File *file = new File(filePath);
     FileInputSource *source = new FileInputSource(*file, false);
     InputStream *stream = source->createInputStream();
@@ -17,17 +18,18 @@ MelodicSamplerSound::MelodicSamplerSound (String& filePath,
     if (sourceSampleRate <= 0 || reader->lengthInSamples <= 0) {
         length = 0;
     } else {
-        length = jmin ((int) reader->lengthInSamples, endSamples);
+        int begin = jmin((int) reader->lengthInSamples - 1, beginSamples);
+        length = jmin ((int) reader->lengthInSamples - begin, numSamples);
         data = new AudioSampleBuffer (jmin (2, (int) reader->numChannels), length + 4);
-        reader->read (data, 0, length + 4, 0, true, true);
+        reader->read (data, 0, length + 4, begin, true, true);
     }
 }
 
 MelodicSamplerSound::~MelodicSamplerSound() {
 }
 
-bool MelodicSamplerSound::appliesToNote (int /*midiNoteNumber*/) {
-    return true; // applies to all notes
+bool MelodicSamplerSound::appliesToNote (int midiNoteNumber) {
+    return note == midiNoteNumber;
 }
 
 bool MelodicSamplerSound::appliesToChannel (int /*midiChannel*/) {
